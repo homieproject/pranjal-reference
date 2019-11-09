@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>About</h1>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script>
+  var sock =new WebSocket("ws://10.0.49.12:3000/about");  //replace this address with the one the node.js server prints out. keep port 3000
+  
+  
+  sock.onopen=function(event){
+  alert("Socket connected succesfully!!!")
+  setTimeout(function(){sock.send('connection succeeded');},1000);
+  
+    
+  };
+</script>
+
+</body>
+</html>
